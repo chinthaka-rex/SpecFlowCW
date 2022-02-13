@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using SpecFlowCW.Drivers;
 
 namespace SpecFlowCW.StepDefinitions
@@ -12,12 +11,10 @@ namespace SpecFlowCW.StepDefinitions
         private readonly ScenarioContext _sContext;
         String _title;
 
-        public LoginPageFeatureStepDefinitions(ScenarioContext sContext)
-        {
-            _sContext = sContext;
-        }
+        public LoginPageFeatureStepDefinitions(ScenarioContext sContext) => _sContext = sContext;
 
         [Given(@"user is on login page")]
+        [Obsolete]
         public void GivenUserIsOnLoginPage()
         {
             driver = _sContext.Get<DriverFactory>("DriverFactory").setup();
