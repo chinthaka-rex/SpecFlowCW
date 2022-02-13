@@ -8,10 +8,7 @@ namespace SpecFlowCW.AppHooks
     {
         private readonly ScenarioContext _sContext;
 
-        public ApplicationHooks(ScenarioContext sContext)
-        {
-            _sContext = sContext;
-        }
+        public ApplicationHooks(ScenarioContext sContext) => _sContext = sContext;
 
         [BeforeScenario]
         public void BeforeScenarioWithTag()
