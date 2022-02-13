@@ -17,8 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AppHooks\" />
-    <Folder Include="Drivers\" />
     <Folder Include="Support\" />
   </ItemGroup>
 
