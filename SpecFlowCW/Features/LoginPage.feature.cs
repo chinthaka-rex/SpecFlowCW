@@ -81,7 +81,7 @@ namespace SpecFlowCW.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login page title", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 3
-  this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -101,7 +101,13 @@ namespace SpecFlowCW.Features
             {
                 this.ScenarioStart();
 #line 4
-    testRunner.Given("user is on login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("user is on login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 5
+testRunner.When("user gets the title of the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 6
+testRunner.Then("page title should be \"Swag Labs\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
