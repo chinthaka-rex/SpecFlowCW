@@ -14,7 +14,7 @@ namespace SpecFlowCW.AppHooks
         public void BeforeScenarioWithTag()
         {
             DriverFactory driver = new DriverFactory(_sContext);
-            _sContext.Set(driver,"DriverFactory");
+            _sContext.Set(driver, "DriverFactory");
 
         }
 
