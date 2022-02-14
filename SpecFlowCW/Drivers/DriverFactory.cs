@@ -21,16 +21,14 @@ namespace SpecFlowCW.Drivers
             capability.AddAdditionalCapability("os_version", "Monterey");
             capability.AddAdditionalCapability("browser", "Safari");
             capability.AddAdditionalCapability("browser_version", "15.0");
-            capability.AddAdditionalCapability("browserstack.local", "false");
-            capability.AddAdditionalCapability("browserstack.selenium_version", "3.14.0");
             //ChromeOptions capability = new ChromeOptions();
             //capability.AddAdditionalCapability("os", "Windows", true);
             //capability.AddAdditionalCapability("os_version", "10", true);
             //capability.AddAdditionalCapability("browser", "Chrome", true);
             //capability.AddAdditionalCapability("browser_version", "latest", true);
-            driver = new RemoteWebDriver(new Uri("https://chinthakawithana_60fUmL:ps4PxvE4iqF59XRguDsx@hub.browserstack.com/wd/hub"),capability);
+            driver = new RemoteWebDriver(new Uri("https://chinthakawithana_60fUmL:ps4PxvE4iqF59XRguDsx@hub.browserstack.com/wd/hub"), capability);
 
-            _sContext.Set(driver,"WebDriver");
+            _sContext.Set(driver, "WebDriver");
             return driver;
         }
     }
