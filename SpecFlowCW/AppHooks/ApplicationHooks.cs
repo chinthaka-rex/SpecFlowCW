@@ -32,6 +32,8 @@ namespace SpecFlowCW.AppHooks
         [BeforeScenario]
         public void BeforeScenarioStart(ScenarioContext sContext)
         {
+            //Console.WriteLine("asdasdasdasdasdasda   ----   "+sContext.StepContext.StepInfo.MultilineText.ToString());
+            
             ExtentReportGenerator eReport = new ExtentReportGenerator();
             _scenario = eReport.setScenarioInfo(sContext, _feature);
         }

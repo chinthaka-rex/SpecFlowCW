@@ -13,7 +13,7 @@ namespace SpecFlowCW.Utils
 
         public ExtentReports extentReportLocator()
         {
-            _extentHtmlReporter = new ExtentHtmlReporter(@"C:\Users\PramodChinthaka\Documents\Visual Studio 2022\SpecFlowCW\SpecFlowCW\Reports\TestResults.html");
+            _extentHtmlReporter = new ExtentHtmlReporter(@"C:\Users\PramodChinthaka\Documents\Visual Studio 2022\SpecFlowCW\SpecFlowCW\Reports\html_report\");
             _extentReports = new ExtentReports();
             _extentReports.AttachReporter(_extentHtmlReporter);
             return _extentReports;
