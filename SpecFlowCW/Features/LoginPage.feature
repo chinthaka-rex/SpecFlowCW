@@ -7,8 +7,8 @@ Scenario: Login page title
 	When user gets the title of the page
 	Then page title should be "Swag Labs"
 
-@CBC-43
-Scenario: Login page title2
-	Given user is on login page
-	When user gets the title of the page
-	Then page title should be "Swag Labss"
+#@CBC-43
+#Scenario: Login page title2
+#	Given user is on login page
+#	When user gets the title of the page
+#	Then page title should be "Swag Labss"
