@@ -21,14 +21,14 @@ namespace SpecFlowCW.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Login page feature")]
-    [NUnit.Framework.CategoryAttribute("CBC-49")]
+    [NUnit.Framework.CategoryAttribute("PROJ-5")]
     public partial class LoginPageFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "CBC-49"};
+                "PROJ-5"};
         
 #line 1 "LoginPage.feature"
 #line hidden
@@ -38,7 +38,7 @@ namespace SpecFlowCW.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login page feature", null, ProgrammingLanguage.CSharp, new string[] {
-                        "CBC-49"});
+                        "PROJ-5"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,11 +78,11 @@ namespace SpecFlowCW.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login page title")]
-        [NUnit.Framework.CategoryAttribute("CBC-42")]
+        [NUnit.Framework.CategoryAttribute("PROJ-1")]
         public virtual void LoginPageTitle()
         {
             string[] tagsOfScenario = new string[] {
-                    "CBC-42"};
+                    "PROJ-1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login page title", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
