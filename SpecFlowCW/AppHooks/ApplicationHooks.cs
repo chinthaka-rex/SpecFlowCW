@@ -13,6 +13,8 @@ namespace SpecFlowCW.AppHooks
         private static ExtentTest? _feature;
         private static ExtentTest? _scenario;
 
+        XrayJsonCreator xJson = new XrayJsonCreator();
+
         public ApplicationHooks(ScenarioContext sContext) => _sContext = sContext;
 
         [BeforeTestRun]
@@ -49,16 +51,14 @@ namespace SpecFlowCW.AppHooks
             ExtentReportGenerator eReport = new ExtentReportGenerator();
             eReport.setScenarioBlock(_sContext, _scenario);
 
-            XrayJsonCreator xJson = new XrayJsonCreator();
             xJson.getStepResults(_sContext);
-            xJson.getScenarioResults(_sContext);
-            xJson.displayResults();
-            xJson.jsonCreator();
+            xJson.jsonStepCreator();
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
+            xJson.jsonCreator();
             _sContext.Get<IWebDriver>("WebDriver").Quit();
         }
 
@@ -67,7 +67,7 @@ namespace SpecFlowCW.AppHooks
         {
             ExtentReportGenerator eReport = new ExtentReportGenerator();
             eReport.generateExtentReport();
-            
+
         }
     }
 }

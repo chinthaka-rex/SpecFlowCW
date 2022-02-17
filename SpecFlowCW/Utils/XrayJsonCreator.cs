@@ -6,10 +6,16 @@ namespace SpecFlowCW.Utils
     {
         public string? _title, _sTag, _fTag, _stepName, _stepKey, _exeStatus, status;
 
+        public static List<Step> steps = new List<Step>();
+        public static List<Element> elements = new List<Element>();
+
         public void getStepResults(ScenarioContext _sContext)
         {
             _stepName = _sContext.StepContext.StepInfo.Text;
             _stepKey = _sContext.StepContext.StepInfo.StepDefinitionType.ToString();
+            _title = _sContext.ScenarioInfo.Title;
+            _sTag = _sContext.ScenarioInfo.ScenarioAndFeatureTags.ElementAt<string>(0);
+            _fTag = _sContext.ScenarioInfo.ScenarioAndFeatureTags.ElementAt<string>(1);
 
             ScenarioBlock scenarioBlock = _sContext.CurrentScenarioBlock;
 
@@ -58,31 +64,8 @@ namespace SpecFlowCW.Utils
             }
         }
 
-        public void getScenarioResults(ScenarioContext _sContext)
+        public void jsonStepCreator()
         {
-            _title = _sContext.ScenarioInfo.Title;
-            _sTag = _sContext.ScenarioInfo.ScenarioAndFeatureTags.ElementAt<string>(0);
-            _fTag = _sContext.ScenarioInfo.ScenarioAndFeatureTags.ElementAt<string>(1);
-        }
-
-        public void displayResults()
-        {
-            Console.WriteLine("TTTTTTTTTT -------- " + _title);
-            Console.WriteLine("STSTSTSTST -------- " + _stepName);
-            Console.WriteLine("TAGTAGTAGT -------- " + _sTag);
-            Console.WriteLine("FTFTFTFTFT -------- " + _fTag);
-            Console.WriteLine("SKSKSKSKSK -------- " + _stepKey);
-            Console.WriteLine("SSSSSSSSSS -------- " + _exeStatus);
-        }
-
-        public void jsonCreator()
-        {
-            Result result = new Result()
-            {
-                Duration = 1,
-                Status = _exeStatus,
-            };
-
             Step step = new Step()
             {
                 Result = new Result()
@@ -90,10 +73,15 @@ namespace SpecFlowCW.Utils
                     Duration = 1,
                     Status = _exeStatus,
                 },
-                Name = _title,
+                Name = _stepName,
                 Keyword = _stepKey,
             };
 
+            steps.Add(step);
+        }
+
+        public void jsonCreator()
+        {
             Tag exeTag = new Tag()
             {
                 Name = _fTag,
@@ -106,22 +94,24 @@ namespace SpecFlowCW.Utils
 
             Element element = new Element()
             {
-                Name = _stepName,
+                Name = _title,
                 Type = "scenario",
                 Keyword = "Scenario",
-                Steps = new List<Step>() { step },
+                Steps = new List<Step>(steps),
                 Tags = new List<Tag>() { exeTag, tcTag },
             };
 
+            elements.Add(element);
+            steps.Clear();
+
             Root root = new Root()
             {
-                Elements = new List<Element>() { element },
+                Elements = new List<Element>(elements),
             };
 
             string json = JsonConvert.SerializeObject(root);
             string updatedJson = "[" + json + "]";
             File.WriteAllText(@"C:\Users\PramodChinthaka\Documents\Visual Studio 2022\SpecFlowCW\SpecFlowCW\Reports\json_report\results.json", updatedJson);
-
         }
     }
 

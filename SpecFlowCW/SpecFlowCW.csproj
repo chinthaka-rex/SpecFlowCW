@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Target\" />
     <Folder Include="Reports\html_report\" />
     <Folder Include="Reports\json_report\" />
   </ItemGroup>
