@@ -43,17 +43,17 @@ namespace SpecFlowCW.AppHooks
             _sContext.Set(driver, "DriverFactory");
         }
 
-        [BeforeScenario(Order = 2)]
-        public void FirstBeforeScenario()
-        {
-
-        }
-
         [AfterStep]
-        public void AfterEachStep()
+        public void AfterEachStep(FeatureContext _fContext)
         {
             ExtentReportGenerator eReport = new ExtentReportGenerator();
             eReport.setScenarioBlock(_sContext, _scenario);
+
+            XrayJsonCreator xJson = new XrayJsonCreator();
+            xJson.getStepResults(_sContext);
+            xJson.getScenarioResults(_sContext);
+            xJson.displayResults();
+            xJson.jsonCreator();
         }
 
         [AfterScenario]
@@ -67,6 +67,7 @@ namespace SpecFlowCW.AppHooks
         {
             ExtentReportGenerator eReport = new ExtentReportGenerator();
             eReport.generateExtentReport();
+            
         }
     }
 }
