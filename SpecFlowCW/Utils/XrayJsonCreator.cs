@@ -121,48 +121,48 @@ namespace SpecFlowCW.Utils
         public int Duration { get; set; }
 
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
     }
 
     public class Step
     {
         [JsonProperty("result")]
-        public Result Result { get; set; }
+        public Result? Result { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonProperty("keyword")]
-        public string Keyword { get; set; }
+        public string? Keyword { get; set; }
     }
 
     public class Tag
     {
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 
     public class Element
     {
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [JsonProperty("keyword")]
-        public string Keyword { get; set; }
+        public string? Keyword { get; set; }
 
         [JsonProperty("steps")]
-        public List<Step> Steps { get; set; }
+        public List<Step>? Steps { get; set; }
 
         [JsonProperty("tags")]
-        public List<Tag> Tags { get; set; }
+        public List<Tag>? Tags { get; set; }
     }
 
     public class Root
     {
         [JsonProperty("elements")]
-        public List<Element> Elements { get; set; }
+        public List<Element>? Elements { get; set; }
     }
 }
