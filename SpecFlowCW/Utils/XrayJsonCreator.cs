@@ -111,7 +111,7 @@ namespace SpecFlowCW.Utils
 
             string json = JsonConvert.SerializeObject(root);
             string updatedJson = "[" + json + "]";
-            File.WriteAllText(@"C:\Users\PramodChinthaka\Documents\Visual Studio 2022\SpecFlowCW\SpecFlowCW\Reports\json_report\results.json", updatedJson);
+            File.WriteAllText(@"~/../../../../Reports/json_report/results.json", updatedJson);
         }
     }
 
