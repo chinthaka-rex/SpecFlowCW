@@ -11,7 +11,7 @@ Scenario: Login page title
 Scenario: Login page title2
 	Given user is on login page
 	When user gets the title of the page
-	Then page title should be "Swag Labss"
+	Then page title should be "Swag Labs"
 
 @PROJ-6
 Scenario: Login page title3
