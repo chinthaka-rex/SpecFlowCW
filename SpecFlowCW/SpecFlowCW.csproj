@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Jenkins\" />
     <Folder Include="Reports\html_report\" />
     <Folder Include="Reports\json_report\" />
   </ItemGroup>
