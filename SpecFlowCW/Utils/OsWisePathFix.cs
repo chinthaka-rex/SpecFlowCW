@@ -15,8 +15,8 @@ namespace SpecFlowCW.Utils
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
                 Console.WriteLine("This is osx");
-                Settings.Default.extentReportPath = "SpecFlowCW/SpecFlowCW/Reports/";
-                Settings.Default.jsonReportPath = "SpecFlowCW/SpecFlowCW/Reports/results.json";
+                Settings.Default.extentReportPath = "/SpecFlowCW/SpecFlowCW/Reports/";
+                Settings.Default.jsonReportPath = "/SpecFlowCW/SpecFlowCW/Reports/results.json";
             }
         }
     }
