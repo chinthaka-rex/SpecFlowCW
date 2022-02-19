@@ -8,18 +8,13 @@ namespace SpecFlowCW.Utils
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                Console.WriteLine("This is windows");
-                Settings.Default.extentReportPath = "~/../../../../Reports/";
-                Settings.Default.jsonReportPath = "~/../../../../Reports/results.json";
+                Settings.Default.extentReportPath = "~/../../../../bin/Debug/net6.0/Reports/";
+                Settings.Default.jsonReportPath = "~/../../../../bin/Debug/net6.0/Reports/results.json";
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                //string text = File.ReadAllText("Reports/c.txt");
-                //Console.WriteLine( text);
-
-                Console.WriteLine("This is osx");
-                //Settings.Default.extentReportPath = "/SpecFlowCW/SpecFlowCW/Reports/";
-                //Settings.Default.jsonReportPath = "/SpecFlowCW/SpecFlowCW/Reports/results.json";
+                Settings.Default.extentReportPath = "Reports/";
+                Settings.Default.jsonReportPath = "Reports/results.json";
             }
         }
     }
