@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 
 namespace SpecFlowCW.Utils
 {
@@ -10,12 +6,15 @@ namespace SpecFlowCW.Utils
     {
         public void setGlobalSetting()
         {
-            //OperatingSystem operatingSystem = new OperatingSystem();
-            //string os =  operatingSystem.Platform.Should
-            //System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(osPlatform.Windows);
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Settings.Default.extentReportPath = "~/../../../../Reports/";
+                Settings.Default.jsonReportPath = "~/../../../../Reports/results.json";
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
 
-            Settings.Default.extentReportPath = "~/../../../../Reports/";
-            Settings.Default.jsonReportPath = "~/../../../../Reports/results.json";
+            }
         }
     }
 }
