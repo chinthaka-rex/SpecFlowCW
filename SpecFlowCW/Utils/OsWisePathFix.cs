@@ -8,8 +8,8 @@ namespace SpecFlowCW.Utils
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                Settings.Default.extentReportPath = "~/../../../../bin/Debug/net6.0/Reports/";
-                Settings.Default.jsonReportPath = "~/../../../../bin/Debug/net6.0/Reports/results.json";
+                Settings.Default.extentReportPath = "~/../../../SpecFlowCW/bin/Debug/net6.0/Reports/";
+                Settings.Default.jsonReportPath = "~/../../../SpecFlowCW/bin/Debug/net6.0/Reports/results.json";
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
