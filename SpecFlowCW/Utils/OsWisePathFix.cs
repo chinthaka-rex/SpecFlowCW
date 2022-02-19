@@ -14,12 +14,12 @@ namespace SpecFlowCW.Utils
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                string text = System.IO.File.ReadAllText("/SpecFlowCW/SpecFlowCW/Reports/c.txt");
+                string text = File.ReadAllText("/SpecFlowCW/SpecFlowCW/Reports/c.txt");
                 Console.WriteLine( text);
 
                 Console.WriteLine("This is osx");
-                Settings.Default.extentReportPath = "/SpecFlowCW/SpecFlowCW/Reports/";
-                Settings.Default.jsonReportPath = "/SpecFlowCW/SpecFlowCW/Reports/results.json";
+                //Settings.Default.extentReportPath = "/SpecFlowCW/SpecFlowCW/Reports/";
+                //Settings.Default.jsonReportPath = "/SpecFlowCW/SpecFlowCW/Reports/results.json";
             }
         }
     }
