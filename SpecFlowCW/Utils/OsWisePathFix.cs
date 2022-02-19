@@ -13,7 +13,8 @@ namespace SpecFlowCW.Utils
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-
+                Settings.Default.extentReportPath = "SpecFlowCW/SpecFlowCW/Reports/";
+                Settings.Default.jsonReportPath = "SpecFlowCW/SpecFlowCW/Reports/results.json";
             }
         }
     }
