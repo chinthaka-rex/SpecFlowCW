@@ -14,7 +14,7 @@ namespace SpecFlowCW.Utils
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                string text = File.ReadAllText("/SpecFlowCW/SpecFlowCW/Reports/c.txt");
+                string text = File.ReadAllText("SpecFlowCW/SpecFlowCW/Reports/c.txt");
                 Console.WriteLine( text);
 
                 Console.WriteLine("This is osx");
