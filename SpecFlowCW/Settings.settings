@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpecFlowCW" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="jsonReportPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="extentReportPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="bsUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">chinthakawithana_60fUmL</Value>
+    </Setting>
+    <Setting Name="bsAccessKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ps4PxvE4iqF59XRguDsx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

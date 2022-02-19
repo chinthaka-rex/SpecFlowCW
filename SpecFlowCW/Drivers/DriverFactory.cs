@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Safari;
 
 namespace SpecFlowCW.Drivers
 {
@@ -15,17 +15,8 @@ namespace SpecFlowCW.Drivers
         [Obsolete]
         public IWebDriver setup()
         {
-            SafariOptions capability = new SafariOptions();
-            capability.AddAdditionalCapability("os", "OS X");
-            capability.AddAdditionalCapability("os_version", "Monterey");
-            capability.AddAdditionalCapability("browser", "Safari");
-            capability.AddAdditionalCapability("browser_version", "15.0");
-            //ChromeOptions capability = new ChromeOptions();
-            //capability.AddAdditionalCapability("os", "Windows", true);
-            //capability.AddAdditionalCapability("os_version", "10", true);
-            //capability.AddAdditionalCapability("browser", "Chrome", true);
-            //capability.AddAdditionalCapability("browser_version", "latest", true);
-            driver = new RemoteWebDriver(new Uri("https://chinthakawithana_60fUmL:ps4PxvE4iqF59XRguDsx@hub.browserstack.com/wd/hub"), capability);
+            ChromeOptions capability = new ChromeOptions();
+            driver = new RemoteWebDriver(new Uri("https://" + Settings.Default.bsUsername + ":" + Settings.Default.bsAccessKey + "@hub.browserstack.com/wd/hub"), capability);
 
             _sContext.Set(driver, "WebDriver");
             return driver;

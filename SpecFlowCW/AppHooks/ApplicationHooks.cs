@@ -20,6 +20,9 @@ namespace SpecFlowCW.AppHooks
         [BeforeTestRun]
         public static void beforeTestRun()
         {
+            OsWisePathFix osWisePathFix = new OsWisePathFix();
+            osWisePathFix.setGlobalSetting();
+
             ExtentReportGenerator eReport = new ExtentReportGenerator();
             _extentReports = eReport.extentReportLocator();
         }

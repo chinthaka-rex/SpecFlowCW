@@ -4,7 +4,7 @@ using AventStack.ExtentReports.Reporter;
 
 namespace SpecFlowCW.Utils
 {
-    internal class ExtentReportGenerator
+    public class ExtentReportGenerator
     {
         private static ExtentReports? _extentReports;
         private static ExtentHtmlReporter? _extentHtmlReporter;
@@ -13,7 +13,7 @@ namespace SpecFlowCW.Utils
 
         public ExtentReports extentReportLocator()
         {
-            _extentHtmlReporter = new ExtentHtmlReporter(@"~/../../../../Reports/html_report/");
+            _extentHtmlReporter = new ExtentHtmlReporter(Settings.Default.extentReportPath);
             _extentReports = new ExtentReports();
             _extentReports.AttachReporter(_extentHtmlReporter);
             return _extentReports;
