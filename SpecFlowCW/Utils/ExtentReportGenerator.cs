@@ -16,6 +16,7 @@ namespace SpecFlowCW.Utils
             _extentHtmlReporter = new ExtentHtmlReporter(Settings.Default.extentReportPath);
             _extentReports = new ExtentReports();
             _extentReports.AttachReporter(_extentHtmlReporter);
+            _extentHtmlReporter.LoadConfig(Settings.Default.extentConfigXmlPath);
             return _extentReports;
         }
 
