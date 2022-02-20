@@ -1,6 +1,7 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
+using System.Runtime.InteropServices;
 
 namespace SpecFlowCW.Utils
 {
@@ -16,7 +17,11 @@ namespace SpecFlowCW.Utils
             _extentHtmlReporter = new ExtentHtmlReporter(Settings.Default.extentReportPath);
             _extentReports = new ExtentReports();
             _extentReports.AttachReporter(_extentHtmlReporter);
-            _extentHtmlReporter.LoadConfig(Settings.Default.extentConfigXmlPath);
+
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                _extentHtmlReporter.LoadConfig(Settings.Default.extentConfigXmlPath);
+            }
             return _extentReports;
         }
 
