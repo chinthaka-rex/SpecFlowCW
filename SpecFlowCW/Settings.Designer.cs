@@ -70,5 +70,17 @@ namespace SpecFlowCW {
                 this["bsAccessKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("~/../../../../Resources/extent_config.xml")]
+        public string extentConfigXmlPath {
+            get {
+                return ((string)(this["extentConfigXmlPath"]));
+            }
+            set {
+                this["extentConfigXmlPath"] = value;
+            }
+        }
     }
 }

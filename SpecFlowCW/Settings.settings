@@ -14,5 +14,8 @@
     <Setting Name="bsAccessKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">ps4PxvE4iqF59XRguDsx</Value>
     </Setting>
+    <Setting Name="extentConfigXmlPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">~/../../../../Resources/extent_config.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
