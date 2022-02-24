@@ -5,7 +5,7 @@ Feature: Login page feature
 Scenario: Login page title
 	Given user is on login page
 	When user gets the title of the page
-	Then page title should be "Swag Labss"
+	Then page title should be "Swag Labs"
 
 #@DA-2
 #Scenario: Login page title2
